@@ -1,0 +1,21 @@
+.navigation {
+  position: sticky;
+  top: 50px;
+  left: 0;
+  right: 0;
+  .nav-pills {
+    .title-3 {
+      padding-bottom: 2rem;
+    }
+  }
+
+  .nav-link {
+    color: var(--white-color);
+    padding-left: 0;
+  }
+
+  .nav-link.active {
+    color: var(--sky-blue-color);
+    background-color: transparent;
+  }
+}

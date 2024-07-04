@@ -1,0 +1,31 @@
+<main class="main">
+  <app-navbar></app-navbar>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-9">
+          <div class="sections">
+            <div data-bs-spy="scroll" data-bs-target="#navbar-cases" data-bs-smooth-scroll="true"
+              class="scrollspy-example" tabindex="0" data-bs-offset="0">
+              <section id="section-hero" class="hero">
+                <h2 class="title-eyebrow">Foward, Faster Works</h2>
+                <h1 class="title">
+                  A case Study in Transformative Digital Brilliance
+                </h1>
+                <p>
+                  Witness the evolution of digital briliance as we
+                  navigate through strategic design choices, immersive
+                  storytelling, and seamless user experiences.
+                </p>
+              </section>
+            </div>
+            <app-single-case *ngFor="let casesData of casesDataList" [casesData]="casesData"></app-single-case>
+          </div>
+        <router-outlet />
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</main>

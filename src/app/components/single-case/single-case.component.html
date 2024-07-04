@@ -1,0 +1,107 @@
+<section class="case" id="case-{{ casesData.id }}">
+  <img [src]="casesData.logo" alt="Logo {{ casesData.id }}" class="case-logo" />
+  <div class="case-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <h2 class="title-2">{{ casesData.heading }}</h2>
+          <div [innerHtml]="casesData.content"></div>
+          <a
+            *ngIf="casesData.button"
+            [href]="casesData.button.url"
+            [alt]="casesData.button.alt"
+            [target]="casesData.button.target ? casesData.button.target : '_blank'"
+            class="green-button small-text"
+            >{{ casesData.button.text }}</a
+          >
+        </div>
+        <div class="col-3 offset-1">
+          <div class="services-list">
+            <span class="title-4">Services Provided</span>
+            <ul class="small-text">
+              <li *ngFor="let casesData of casesData.services">
+                {{ casesData }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case Images -->
+  <div class="case-images">
+    <!-- If Carousel of Images -->
+    <div
+      id="carouselIndicators-{{ casesData.id }}"
+      class="carousel slide"
+      *ngIf="casesData.carousel.length > 0"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          [attr.data-bs-target]="'#carouselIndicators-' + casesData.id"
+          [attr.data-bs-slide-to]="i"
+          ngClass="{{ i == 0 ? 'active' : '' }}"
+          aria-current="true"
+          [attr.aria-label]="'Slide-' + i + 1"
+          *ngFor="let slides of casesData.carousel; index as i"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div
+          class="carousel-item"
+          *ngFor="let casesData of casesData.carousel; index as i"
+          ngClass="{{ i == 0 ? 'active' : '' }}"
+        >
+          <div class="carousel-grid">
+            <div
+              class="grid-{{ i + 1 }}"
+              *ngFor="let slides of casesData; index as i"
+            >
+              <a
+                [href]="casesData[i].lightboxUrl"
+                [data-remote]="casesData[i].lightboxUrl"
+                data-toggle="lightbox"
+                *ngIf="casesData[i].lightboxUrl"
+              >
+              </a>
+              <img [src]="casesData[i].mediaUrl" [alt]="casesData[i].alt" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        [attr.data-bs-target]="'#carouselIndicators-' + casesData.id"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        [attr.data-bs-target]="'#carouselIndicators-' + casesData.id"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- If Video -->
+    <div
+      style="padding: 56.25% 0 0 0; position: relative"
+      *ngIf="casesData.videoUrl"
+    >
+      <iframe
+        [src]="casesData.videoUrl.url | safe : 'resourceUrl'"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture; webkitallowfullscreen mozallowfullscreen allowfullscreen"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+        [title]="casesData.videoUrl.title"
+      ></iframe>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<aside class="navigation">
+    <nav id="navbar-cases" class="h-100 flex-column align-items-stretch">
+      <nav class="nav nav-pills flex-column medium-text">
+        <span class="title-3">Cases</span>
+        <a class="nav-link d-none active" href="#section-hero">Hero</a>
+        <a class="nav-link" href="#case-amazon" [ngClass]="{'active': selectedOption === 'case-amazon'}" (click)="setOption('case-amazon')">Amazon</a>
+        <a class="nav-link" href="#case-sunbelt" [ngClass]="{'active': selectedOption === 'case-sunbelt'}" (click)="setOption('case-sunbelt')">Sunbelt</a>
+        <a class="nav-link" href="#case-microsoft" [ngClass]="{'active': selectedOption === 'case-microsoft'}" (click)="setOption('case-microsoft')">Microsoft</a>
+        <a class="nav-link" href="#case-nj-lottery" [ngClass]="{'active': selectedOption === 'case-nj-lottery'}" (click)="setOption('case-nj-lottery')">NJ Lottery</a>
+        <a class="nav-link" href="#case-ford" [ngClass]="{'active': selectedOption === 'case-ford'}" (click)="setOption('case-ford')">Ford</a>
+        <a class="nav-link" href="#case-xyzal" [ngClass]="{'active': selectedOption === 'case-xyzal'}" (click)="setOption('case-xyzal')">Xyzal</a>
+        <a class="nav-link" href="#case-bevmo-gopuff" [ngClass]="{'active': selectedOption === 'case-bevmo-gopuff'}" (click)="setOption('case-bevmo-gopuff')">BevMo! + gopuff</a>
+        <a class="nav-link" href="#case-rohto" [ngClass]="{'active': selectedOption === 'case-rohto'}" (click)="setOption('case-rohto')">Rohto</a>
+        <a class="nav-link" href="#case-ecostyle" [ngClass]="{'active': selectedOption === 'case-ecostyle'}" (click)="setOption('case-ecostyle')">Eco Style</a>
+        <a class="nav-link" href="#case-unfi" [ngClass]="{'active': selectedOption === 'case-unfi'}" (click)="setOption('case-unfi')">UNFI</a>
+        <!-- <a class="nav-link" href="#case-tbc-corporation">TBC Corporation</a> -->
+      </nav>
+    </nav>
+  </aside>
+  

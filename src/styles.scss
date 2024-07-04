@@ -1,0 +1,216 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+:root {
+	//--main-font: ;
+	--red-color: #e34839;
+	--sky-blue-color: #89b9f5;
+	--blue-color: #192f41;
+	--green-color: #d0e157;
+	--antique-white-color: #ecebe4;
+	--white-color: #ededf3;
+	--fw-bold: 600;
+	--fw-black: 900;
+	--fs-italic: italic;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/nexa/nexa-thin.otf");
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/nexa/nexa-extralight.otf");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/nexa/nexa-regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/nexa/nexa-book.otf");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/nexa/nexa-bold.otf");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/nexa/nexa-extrabold.otf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/nexa/nexa-heavy.otf");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/nexa/nexa-black.otf");
+  font-style: normal;
+  font-weight: 900;
+}
+
+body {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+html {
+	font-size: 62.5%;
+	/* 62.5% equates to 16px w/ rems w/o locking into pixel size for accessibility */
+}
+
+header {
+	background-color: var(--blue-color);
+	color: var(--white-color);
+	padding: 5rem 0;
+
+	.contact-link {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: var(--white-color);
+	}
+}
+
+footer {
+	background-color: var(--blue-color);
+	color: var(--white-color);
+	padding: 5rem 0;
+
+	.title-2 {
+		color: var(--sky-blue-color);
+	}
+
+	a,
+	.small-text {
+		color: var(--white-color);
+	}
+
+	.line {
+		border-top: 1px solid var(--green-color);
+		padding-bottom: 10px;
+		display: flex;
+	}
+}
+
+// H1 Nexa Black
+.title {
+    font-family: "Nexa", sans-serif;
+    font-weight: 900;
+    font-size: 4.8rem;
+    line-height: 6rem;
+  }
+  
+.title-2 {
+  font-family: "Nexa", sans-serif;
+  color: var(--red-color);
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 6rem;
+}
+
+.title-3 {
+  font-family: "Nexa", sans-serif;
+  color: var(--red-color);
+  font-weight: 800;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+.title-4 {
+  font-family: "Nexa", sans-serif;
+  color: var(--red-color);
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+.title-eyebrow {
+  color: var(--sky-blue-color);
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 2.7rem;
+}
+
+p,
+.large-text {
+  font-family: "Nexa", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+.medium-text {
+  color: var(--white-color);
+  font-family: "Nexa", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+
+.small-text {
+  color: var(--sky-blue-color);
+  font-family: "Nexa", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  background: transparent;
+  height: 35px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 42% !important;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+  left: -33px;
+}
+
+.owl-carousel .owl-nav .owl-next {
+  right: -33px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 20px;
+  height: 20px;
+  background: #869791;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #D6D6D6;
+}
+
+// TO-DO
+.dialog-modal{
+  background-color: transparent!important;
+  .mat-mdc-dialog-surface {
+   background-color: transparent!important;
+  }
+  iframe#cuarto {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
